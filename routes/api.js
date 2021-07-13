@@ -16,9 +16,12 @@ router.get('/categories', async function(req, res, next) {
     res.json(categories)
 });
 
-router.get('/questions', async function(req, res, next) {
+// http://localhost:3000/api/v1/questions?categoryId=4 //req.query
+// http://localhost:3000/api/v1/categories/4/questions //req.params
+router.get('/categories/:categoryId/questions', async function(req, res, next) {
     // HINT: req.query, req.query.categoryId
-    let questions = await Question.findAll({where: {categoryId: 'something that you send from the front end'}})
+    console.log(req.params)
+    let questions = await Question.findAll({where: {categoryId: req.params.categoryId}})
     res.json(questions)
 });
 
@@ -26,6 +29,16 @@ router.get('/answers', async function(req, res, next) {
     // HINT: req.query, req.query.questionId
     let answers = await Answer.findAll({where: {questionId: 'something that you send from the front end'}})
     res.json(answers)
+});
+
+router.post('/categories/:categoryId/questions', async function(req, res, next) {
+    // HINT: req.query, req.query.questionId
+    console.log('req.body', req.body)
+    console.log('req.params', req.params)
+    req.body.categoryId = req.params.categoryId
+    console.log('the final body is', req.body)
+    let question = await Question.create(req.body)
+    res.json(question)
 });
 
 router.get('/test', function(req, res, next) {

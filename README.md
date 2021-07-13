@@ -2,11 +2,7 @@
 
 ---
 
-> Update the get questions route by sending back the categoryId as a req.query from the front end UI
-
-> Update the get answers route by sending back the questionId as a req.query from the front end UI 
-
-> Create API routes to support the UI
+> ~~Update the get questions route by sending back the categoryId as a req.query from the front end UI~~
 
 > ~~Create an API router and make sure the API router works as expected by testing it in POSTMAN/Chrome extension.~~
 
