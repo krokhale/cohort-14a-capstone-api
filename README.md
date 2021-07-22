@@ -10,6 +10,6 @@
 
 > ~~Figure out the tables that we will need. Also figure out the relationships between the tables and how to create those relationships using sequelize.~~ 
 
-> Create an API route to support creating an answer in the database. Your route might look like this: /questions/:questionId/answers POST
+> ~~Create an API route to support creating an answer in the database. Your route might look like this: /questions/:questionId/answers POST~~
 
-> Create an API route to support listing all the answers for a question in the database. Your route might look like this: /questions/:questionId/answers GET 
+> ~~Create an API route to support listing all the answers for a question in the database. Your route might look like this: /questions/:questionId/answers GET~~ 
